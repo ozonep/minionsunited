@@ -18,13 +18,19 @@ class Chat extends Component {
     };
     componentDidMount() {
         messages.query = messages.ref.orderBy('created', 'asc');
-
+        // this.elem.scrollTop = this.elem.scrollHeight
+    };
+    handleKeyPress = e => {
+        if (e.key === 'Enter') {
+            this.createMsg(e);
+        }
     };
     createMsg = e => {
         e.preventDefault();
         let epoc = Date.now();
         let date = new Date(epoc);
         let humanReadable = date.toDateString();
+        let targetting = e.target.value;
         return db.collection('messages').add({
             content: this.state.msgContent,
             created: epoc,
@@ -32,6 +38,8 @@ class Chat extends Component {
             authorUid: doc.data.uid,
             authorName: doc.data.displayName,
             authorPhoto: doc.data.photoURL,
+        }).then(() => {
+            targetting = "";
         })
     };
     render() {
@@ -66,7 +74,7 @@ class Chat extends Component {
                     <Grid.Column width={7}>
                         <Form onSubmit={this.createMsg}>
                             <label>Type your message here:</label>
-                            <Form.TextArea autoHeight rows={1} placeholder='e.g.: I want some banana' onChange={e => {this.setState({msgContent: e.target.value})}}/>
+                            <Form.TextArea autoHeight rows={1} placeholder='e.g.: I want some banana' onKeyPress={this.handleKeyPress} onChange={e => {this.setState({msgContent: e.target.value})}}/>
                             <Form.Button fluid color='blue'>Send</Form.Button>
                         </Form>
                     </Grid.Column>

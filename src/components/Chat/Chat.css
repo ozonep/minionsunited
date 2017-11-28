@@ -1,14 +1,5 @@
 .chatcontainer {
     height: 60vh;
-    flex: 1;
-    display: flex;
-    flex-direction: column-reverse;
     overflow: auto;
-}
-
-.crazy {
-    display:flex;
-    flex-direction:column;
-    height: 60vh;
 }
 
