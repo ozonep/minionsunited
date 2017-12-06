@@ -1,7 +1,8 @@
 
 ## Minions United
 
-Just a small project based on React/MobX/Firestore. WIP.
+Just a small social network/chat based on React/MobX/Firestore.
+In chat I use API to translate English to Minionese ( "Hello" => "Bello" etc)
 
-_**Demo:**_ https://minionnetwork-ddfa0.firebaseapp.com
+![My image](https://github.com/ozonep/minionsunited/blob/master/screens/screenshot1.png)
 
