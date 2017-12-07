@@ -6,7 +6,7 @@ import { Grid, Feed, Segment, Message, Button, Form, Container } from 'semantic-
 import './Chat.css';
 // import {MessageBox, SystemMessage, MessageList, Input} from 'react-chat-elements';
 import MessageBox from './MessageBox';
-import 'react-chat-elements/dist/main.css';
+// import 'react-chat-elements/dist/main.css';
 import Wrapper from "../Wrapper";
 const moment = require('moment');
 
@@ -98,6 +98,7 @@ class Messages extends Component {
                             title={message.data.authorName}
                             avatar={message.data.authorPhoto}
                             titleColor={this.props.uid === message.data.authorUid ? 'blue' : 'black'}
+                            date={message.data.created}
                             />
                 ))}
             </Wrapper>

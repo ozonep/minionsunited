@@ -6,4 +6,5 @@ In chat I use API to translate English to Minionese ( "Hello" => "Bello" etc).
 WIP (work in progress).
 
 ![My image](https://github.com/ozonep/minionsunited/blob/master/screens/screenshot1.png)
-
+![My image2](https://github.com/ozonep/minionsunited/blob/master/screens/screenshot2.png)
+![My image3](https://github.com/ozonep/minionsunited/blob/master/screens/screenshot3.png)

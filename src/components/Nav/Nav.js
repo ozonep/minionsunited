@@ -27,7 +27,7 @@ export default class NavBar extends Component {
                 <Menu.Item name='Users' icon='users' active={activeItem === 'messages'} onClick={this.handleItemClick} as={NavLink} to='/users'/>
                 <Menu.Item name='Profile' icon='user' active={activeItem === 'friends'} onClick={this.handleItemClick} as={NavLink} to={'/profile'} />
                 <Menu.Item name='Chat' icon='comments' active={activeItem === 'chat'} onClick={this.handleItemClick} as={NavLink} to={'/chat'} />
-                <Menu.Header as='h2' className="menuHeader">minion network</Menu.Header>
+                <Menu.Header as='h2' className="menuHeader">minions united</Menu.Header>
                 <Menu.Menu position='right'>
                     <Menu.Item>
                         <Input icon='search' placeholder='Search...' />
